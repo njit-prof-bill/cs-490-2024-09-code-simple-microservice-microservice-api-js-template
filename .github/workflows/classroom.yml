@@ -13,6 +13,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+    - name: Install dependencies
+      run: npm install  # Ensure Jest and all other dependencies are installed    
     - name: PR Submission and Merge
       id: pr-submission-and-merge
       uses: classroom-resources/autograding-command-grader@v1
